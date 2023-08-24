@@ -7,7 +7,9 @@ import com.example.dictionary.adapter.holder.SubbunpoHolder
 import com.example.dictionary.databinding.ChapterListItemBinding
 import com.example.dictionary.model.SubbunpoResponseItem
 
-class SubbunpoAdapter(var data:ArrayList<SubbunpoResponseItem> = ArrayList()): RecyclerView.Adapter<SubbunpoHolder>() {
+class SubbunpoAdapter(private var initialData:ArrayList<SubbunpoResponseItem> = ArrayList()): RecyclerView.Adapter<SubbunpoHolder>() {
+    private val data = ArrayList(initialData)
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubbunpoHolder {
         val binding = ChapterListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SubbunpoHolder(binding)
@@ -19,5 +21,11 @@ class SubbunpoAdapter(var data:ArrayList<SubbunpoResponseItem> = ArrayList()): R
 
     override fun onBindViewHolder(holder: SubbunpoHolder, position: Int) {
         holder.setData(data[position])
+    }
+
+    fun setData(newData: ArrayList<SubbunpoResponseItem>) {
+        data.clear()
+        data.addAll(newData)
+        notifyDataSetChanged()
     }
 }

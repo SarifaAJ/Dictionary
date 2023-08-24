@@ -9,7 +9,7 @@ import com.example.dictionary.databinding.ChapterListItemBinding
 import com.example.dictionary.model.SubkosaResponseItem
 import com.example.dictionary.ui.kosa.KosaActivity
 
-class SubkosaAdapter(var initialData:ArrayList<SubkosaResponseItem> = ArrayList()): RecyclerView.Adapter<SubkosaHolder>() {
+class SubkosaAdapter(private var initialData:ArrayList<SubkosaResponseItem> = ArrayList()): RecyclerView.Adapter<SubkosaHolder>() {
     private val data = ArrayList(initialData)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubkosaHolder {

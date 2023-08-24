@@ -2,22 +2,11 @@ package com.example.dictionary.ui.kanji
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dictionary.adapter.KanjiAdapter
-import com.example.dictionary.adapter.KosaAdapter
 import com.example.dictionary.databinding.ActivityKanjiBinding
-import com.example.dictionary.model.KanjiResponseItem
 import com.example.dictionary.model.LevelResponseItem
-import com.example.dictionary.network.ClientService
-import com.example.dictionary.ui.kosa.KosaViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class KanjiActivity : AppCompatActivity() {
     // binding
@@ -51,8 +40,8 @@ class KanjiActivity : AppCompatActivity() {
             kanjiViewModel.getKanji(it.id)
         }
 
-        kanjiViewModel.response.observe(this) {
-            kanjiAdapter.data
+        kanjiViewModel.response.observe(this) { kanjiList ->
+            kanjiAdapter.setData(ArrayList(kanjiList))
         }
     }
 }
