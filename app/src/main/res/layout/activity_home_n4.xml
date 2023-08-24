@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/wallpaper_2"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    tools:context=".ui.home.HomeActivityN4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_alignParentStart="true"
+            card_view:srcCompat="@drawable/round_arrow_back_blue" />
+
+        <TextView
+            android:id="@+id/unit_n4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:text="@string/unit_n4"
+            style="@style/Title"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kosa_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/kosa_img"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    card_view:srcCompat="@drawable/kosa" />
+
+                <TextView
+                    android:id="@+id/kosa_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:text="@string/kosa"
+                    style="@style/CardViewText"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bunpo_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/bunpo_img"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    card_view:srcCompat="@drawable/bunpo" />
+
+                <TextView
+                    android:id="@+id/bunpo_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:text="@string/bunpo"
+                    style="@style/CardViewText"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kanji_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/kanji_img"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    card_view:srcCompat="@drawable/kanji" />
+
+                <TextView
+                    android:id="@+id/kanji_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:text="@string/kanji"
+                    style="@style/CardViewText"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/penjelasan_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <ImageView
+                    android:id="@+id/penjelasan_img"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    card_view:srcCompat="@drawable/penjelasan" />
+
+                <TextView
+                    android:id="@+id/penjelasan_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:text="@string/penjelasan"
+                    style="@style/CardViewText"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

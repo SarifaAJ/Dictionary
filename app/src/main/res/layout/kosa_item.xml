@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp"
+    card_view:cardBackgroundColor="@color/listViewBg"
+    card_view:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp">
+
+        <TextView
+            android:id="@+id/hiragana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/hiragana"
+            android:textColor="@color/listViewText"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/kanji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/kanji"
+            android:textColor="@color/listViewText"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/romaji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/romaji"
+            android:textColor="@color/listViewText"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/arti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/arti"
+            android:textColor="@color/listViewText"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

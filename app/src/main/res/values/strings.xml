@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+    <string name="learn_japanese">Belajar Bahasa Jepang</string>
+    <string name="n4">N4</string>
+    <string name="n5">N5</string>
+
+    <string name="unit_n4">Unit N4</string>
+    <string name="unit_n5">Unit N5</string>
+
+    <string name="kosa">Kosa</string>
+    <string name="bunpo">Bunpo</string>
+    <string name="kanji">Kanji</string>
+    <string name="penjelasan">Penjelasan</string>
+
+    <string name="arti">Arti</string>
+    <string name="hiragana">Hiragana</string>
+    <string name="romaji">Romaji</string>
+    <string name="kunyomi">Kunyomi</string>
+    <string name="onyomi">Onyomi</string>
+
+    <string name="list_bab">Daftar Isi</string>
+    <string name="bab">Bab</string>
+
+    <string name="toolbar">Toolbar</string>
+</resources>
