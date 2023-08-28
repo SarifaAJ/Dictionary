@@ -7,7 +7,7 @@
     android:background="@color/background"
     android:orientation="vertical"
     android:padding="@dimen/_8sdp"
-    tools:context=".ui.bunpo.SubbunpoActivity">
+    tools:context=".ui.subbunpo.SubbunpoActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

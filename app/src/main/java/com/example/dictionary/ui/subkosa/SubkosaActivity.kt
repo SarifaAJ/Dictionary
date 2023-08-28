@@ -1,4 +1,4 @@
-package com.example.dictionary.ui.kosa
+package com.example.dictionary.ui.subkosa
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

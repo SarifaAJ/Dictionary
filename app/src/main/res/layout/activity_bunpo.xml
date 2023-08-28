@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background"
     android:orientation="vertical"
     android:padding="@dimen/_8sdp"
-    tools:context=".ui.bunpo.BunpoActivity">
+    tools:context=".ui.BunpoActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,14 +25,11 @@
 
         <TextView
             android:id="@+id/bunpo"
-            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_8sdp"
-            android:fontFamily="@font/poppins_medium"
             android:text="@string/bunpo"
-            android:textColor="#a4133c"
-            android:textSize="@dimen/_16sdp" />
+            style="@style/Title"/>
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView

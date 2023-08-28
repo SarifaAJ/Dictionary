@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Dictionary"
         tools:targetApi="31">
         <activity
-            android:name=".ui.bunpo.SubbunpoActivity"
+            android:name=".ui.subbunpo.SubbunpoActivity"
             android:exported="false" />
         <activity
             android:name=".ui.kosa.KosaActivity"
@@ -31,11 +31,11 @@
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.bunpo.BunpoActivity"
+            android:name=".ui.BunpoActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.kosa.SubkosaActivity"
+            android:name=".ui.subkosa.SubkosaActivity"
             android:exported="false" />
         <activity
             android:name=".ui.home.HomeActivityN5"

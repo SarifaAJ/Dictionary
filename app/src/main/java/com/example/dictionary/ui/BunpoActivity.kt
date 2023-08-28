@@ -1,4 +1,4 @@
-package com.example.dictionary.ui.bunpo
+package com.example.dictionary.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

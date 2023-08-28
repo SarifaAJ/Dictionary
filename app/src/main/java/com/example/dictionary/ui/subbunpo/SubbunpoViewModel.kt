@@ -1,10 +1,9 @@
-package com.example.dictionary.ui.bunpo
+package com.example.dictionary.ui.subbunpo
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.dictionary.base.BaseViewModel
 import com.example.dictionary.model.SubbunpoResponseItem
-import com.example.dictionary.model.SubkosaResponseItem
 import com.example.japanesedictionary.network.getErrorMessage
 import com.example.dictionary.repo.DictionaryRepo
 import io.reactivex.android.schedulers.AndroidSchedulers
