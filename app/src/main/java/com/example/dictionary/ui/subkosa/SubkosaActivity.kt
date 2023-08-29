@@ -2,6 +2,7 @@ package com.example.dictionary.ui.subkosa
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.dictionary.adapter.SubkosaAdapter
@@ -41,6 +42,7 @@ class SubkosaActivity : AppCompatActivity() {
 
         subkosaViewModel.response.observe(this) {subkosaList ->
             subkosaAdapter.setData(ArrayList(subkosaList))
+            Log.e("subkosa activity", subkosaList.size.toString())
         }
     }
 }

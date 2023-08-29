@@ -33,7 +33,7 @@ class KosaActivity : AppCompatActivity() {
         recyclerView.adapter = kosaAdapter
 
         kosaViewModel = ViewModelProvider(this)[KosaViewModel::class.java]
-        // Retrieving the SubkosaResponseitem id passed through intent from previous activity
+        // Retrieving the SubkosaResponseItem id passed through intent from previous activity
         val subkosaId = intent.getStringExtra("subkosa_id")
         subkosaId?.let {
             kosaViewModel.getKosa(it)

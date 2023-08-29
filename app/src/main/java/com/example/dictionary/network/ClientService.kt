@@ -1,8 +1,6 @@
 package com.example.dictionary.network
 
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -52,7 +50,7 @@ class ClientService {
             .addConverterFactory(
                 GsonConverterFactory.create()
             )
-            .baseUrl("http://jepang.aws.web.id/apis/")
+            .baseUrl("https://bahasa-jepang.can.co.id/apis/")
             .client(okHttpClient.build())
             .build()
 

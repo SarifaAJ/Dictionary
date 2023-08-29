@@ -5,9 +5,14 @@
 
     <color name="title">#6276A5</color>
     <color name="background">#CAD8E6</color>
+
     <color name="listViewText">#A2C6D8</color>
     <color name="listViewBg">#FFF7EB</color>
     <color name="cardViewText">#78A3C5</color>
     <color name="cardViewBg">#FFECCF</color>
+
+    <color name="detailBg">#FAFCFB</color>
+    <color name="detailTitle">#B7CEDE</color>
+    <color name="detailDesc">#DFB9B6</color>
 
 </resources>

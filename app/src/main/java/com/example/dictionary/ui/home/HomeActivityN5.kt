@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.example.dictionary.databinding.ActivityHomeN5Binding
 import com.example.dictionary.model.LevelResponseItem
 import com.example.dictionary.ui.kanji.KanjiActivity
-import com.example.dictionary.ui.PenjelasanActivity
+import com.example.dictionary.ui.penjelasan.PenjelasanActivity
 import com.example.dictionary.ui.subbunpo.SubbunpoActivity
 import com.example.dictionary.ui.subkosa.SubkosaActivity
 
