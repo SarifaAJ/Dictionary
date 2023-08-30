@@ -4,10 +4,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="title">#6276A5</color>
-    <color name="background">#CAD8E6</color>
+    <color name="background">#BBD0DC</color>
 
-    <color name="listViewText">#A2C6D8</color>
-    <color name="listViewBg">#FFF7EB</color>
+    <color name="listViewText">#AFC0D4</color>
+    <color name="listViewBg">#FFFDF5</color>
+
     <color name="cardViewText">#78A3C5</color>
     <color name="cardViewBg">#FFECCF</color>
 
