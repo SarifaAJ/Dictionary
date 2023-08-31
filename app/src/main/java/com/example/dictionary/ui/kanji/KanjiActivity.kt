@@ -2,14 +2,18 @@ package com.example.dictionary.ui.kanji
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
+import android.widget.LinearLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dictionary.R
 import com.example.dictionary.adapter.KanjiAdapter
 import com.example.dictionary.databinding.ActivityKanjiBinding
+import com.example.dictionary.databinding.KanjiItemBinding
 import com.example.dictionary.helper.LoadingDialog
 import com.example.dictionary.model.LevelResponseItem
+import java.util.Locale
 
 class KanjiActivity : AppCompatActivity() {
     // binding
@@ -21,6 +25,8 @@ class KanjiActivity : AppCompatActivity() {
     private var isListView = true
     // dialog
     private lateinit var loadingDialog: LoadingDialog
+
+    private lateinit var textToSpeech: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +65,20 @@ class KanjiActivity : AppCompatActivity() {
             loadingDialog.dismiss() // Sembunyikan dialog setelah mendapatkan respons
             kanjiAdapter.setData(ArrayList(kanjiList))
         }
+
+        // Initialize Text-to-Speech engine
+        textToSpeech = TextToSpeech(this) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val locale = Locale("ja", "JP") // Japanese locale
+                val result = textToSpeech.setLanguage(locale)
+
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    // Language data is missing or not supported, handle accordingly
+                }
+            } else {
+                // Text-to-Speech initialization failed, handle accordingly
+            }
+        }
     }
 
     private fun toggleRecyclerViewLayout() {
@@ -73,5 +93,10 @@ class KanjiActivity : AppCompatActivity() {
         }
 
         kanjiAdapter.notifyDataSetChanged()
+    }
+
+    // Function to read a Kanji using Text-to-Speech
+    fun readKanji(text: String) {
+        textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
     }
 }
