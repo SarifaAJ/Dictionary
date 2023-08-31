@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dictionary.databinding.ActivityHomeN4Binding
+import com.example.dictionary.helper.LoadingDialog
 import com.example.dictionary.model.LevelResponseItem
 import com.example.dictionary.ui.kanji.KanjiActivity
 import com.example.dictionary.ui.penjelasan.PenjelasanActivity
@@ -13,6 +14,8 @@ import com.example.dictionary.ui.subkosa.SubkosaActivity
 class HomeActivityN4 : AppCompatActivity() {
     // binding
     private lateinit var binding: ActivityHomeN4Binding
+    // loading dialog
+    private lateinit var loadingDialog: LoadingDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

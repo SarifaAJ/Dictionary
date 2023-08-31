@@ -30,6 +30,17 @@
             android:layout_margin="@dimen/_8sdp"
             android:text="@string/kanji"
             style="@style/Title"/>
+
+
+        <ImageButton
+            android:id="@+id/btn_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@android:color/transparent"
+            android:onClick="toggleView"
+            app:srcCompat="@drawable/round_view_list_24" />
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView

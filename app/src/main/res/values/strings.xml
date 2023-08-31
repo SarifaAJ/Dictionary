@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dictionary</string>
+    <string name="app_name">Belajar Bahasa Jepang</string>
     <string name="learn_japanese">Belajar Bahasa Jepang</string>
     <string name="n4">N4</string>
     <string name="n5">N5</string>
@@ -20,6 +20,10 @@
 
     <string name="list_bab">Daftar Isi</string>
     <string name="bab">Bab</string>
-
     <string name="deskripsi">Deskripsi</string>
+    <string name="search">Cari disini . . .</string>
+    <string name="please_wait">Please wait . . .</string>
+
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
 </resources>
