@@ -3,14 +3,12 @@ package com.example.dictionary.ui.kanji
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.widget.LinearLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dictionary.R
 import com.example.dictionary.adapter.KanjiAdapter
 import com.example.dictionary.databinding.ActivityKanjiBinding
-import com.example.dictionary.databinding.KanjiItemBinding
 import com.example.dictionary.helper.LoadingDialog
 import com.example.dictionary.model.LevelResponseItem
 import java.util.Locale
@@ -47,7 +45,7 @@ class KanjiActivity : AppCompatActivity() {
         // Setting up the RecyclerView for displaying data
         val recyclerView = binding.kanjiRv
         recyclerView.layoutManager = LinearLayoutManager(this)
-        kanjiAdapter = KanjiAdapter()
+        kanjiAdapter = KanjiAdapter(viewType = KanjiAdapter.VIEW_TYPE_LIST) // Atau viewType = KanjiAdapter.VIEW_TYPE_GRID sesuai kebutuhan
         recyclerView.adapter = kanjiAdapter
 
         // loading dialog
@@ -86,13 +84,16 @@ class KanjiActivity : AppCompatActivity() {
 
         if (isListView) {
             recyclerView.layoutManager = LinearLayoutManager(this)
-            binding.btnList.setImageResource(R.drawable.round_view_list_24) // Ganti gambar menjadi ikon grid
+            binding.btnList.setImageResource(R.drawable.round_view_list_24) // Ganti gambar menjadi ikon list
+            kanjiAdapter = KanjiAdapter(initialData = ArrayList(), viewType = KanjiAdapter.VIEW_TYPE_LIST)
         } else {
             recyclerView.layoutManager = GridLayoutManager(this, 2) // Atur numberOfColumns sesuai kebutuhan
-            binding.btnList.setImageResource(R.drawable.round_grid_view_24) // Ganti gambar menjadi ikon list
+            binding.btnList.setImageResource(R.drawable.round_grid_view_24) // Ganti gambar menjadi ikon grid
+            kanjiAdapter = KanjiAdapter(initialData = ArrayList(), viewType = KanjiAdapter.VIEW_TYPE_GRID)
         }
 
-        kanjiAdapter.notifyDataSetChanged()
+        recyclerView.adapter = kanjiAdapter
+        kanjiAdapter.setData(ArrayList(kanjiViewModel.response.value!!)) // Set data ulang ke adapter
     }
 
     // Function to read a Kanji using Text-to-Speech
