@@ -14,8 +14,6 @@ import com.example.dictionary.ui.subkosa.SubkosaActivity
 class HomeActivityN4 : AppCompatActivity() {
     // binding
     private lateinit var binding: ActivityHomeN4Binding
-    // loading dialog
-    private lateinit var loadingDialog: LoadingDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

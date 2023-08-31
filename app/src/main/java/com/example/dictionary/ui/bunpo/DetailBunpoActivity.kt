@@ -22,7 +22,6 @@ class DetailBunpoActivity : AppCompatActivity() {
             finish()
         }
 
-        val id = intent.getStringExtra("bunpo_id")
         val judul = intent.getStringExtra("bunpo_judul")
         val penjelasan = intent.getStringExtra("bunpo_penjelasan")
 

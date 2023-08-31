@@ -22,7 +22,6 @@ class DetailPenjelasanActivity : AppCompatActivity() {
             finish()
         }
 
-        val id = intent.getStringExtra("penjelasan_id")
         val judul = intent.getStringExtra("penjelasan_judul")
         val penjelasan = intent.getStringExtra("penjelasan_penjelasan")
 
