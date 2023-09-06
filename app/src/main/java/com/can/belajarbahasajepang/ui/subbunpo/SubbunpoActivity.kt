@@ -8,6 +8,9 @@ import com.can.belajarbahasajepang.databinding.ActivitySubbunpoBinding
 import com.can.belajarbahasajepang.adapter.SubbunpoAdapter
 import com.can.belajarbahasajepang.helper.LoadingDialog
 import com.can.belajarbahasajepang.model.LevelResponseItem
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class SubbunpoActivity : AppCompatActivity() {
     // binding
@@ -18,6 +21,8 @@ class SubbunpoActivity : AppCompatActivity() {
     private lateinit var subbunpoAdapter: SubbunpoAdapter
     // dialog
     private lateinit var loadingDialog: LoadingDialog
+    // banner ads
+    lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,5 +56,11 @@ class SubbunpoActivity : AppCompatActivity() {
             loadingDialog.dismiss()
             subbunpoAdapter.setData(ArrayList(subbunpoList))
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 }

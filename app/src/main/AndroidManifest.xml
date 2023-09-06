@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dictionary"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1053226146342475~8392396922"/>
+
         <activity
             android:name="com.can.belajarbahasajepang.ui.bunpo.DetailBunpoActivity"
             android:exported="false" />
