@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.dictionary"
+    namespace = "com.can.belajarbahasajepang"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.dictionary"
+        applicationId = "com.can.belajarbahasajepang"
         minSdk = 28
         targetSdk = 33
         versionCode = 1

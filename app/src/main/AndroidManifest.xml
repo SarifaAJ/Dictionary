@@ -16,43 +16,43 @@
         android:theme="@style/Theme.Dictionary"
         tools:targetApi="31">
         <activity
-            android:name=".ui.bunpo.DetailBunpoActivity"
+            android:name="com.can.belajarbahasajepang.ui.bunpo.DetailBunpoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.penjelasan.DetailPenjelasanActivity"
+            android:name="com.can.belajarbahasajepang.ui.penjelasan.DetailPenjelasanActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.subbunpo.SubbunpoActivity"
+            android:name="com.can.belajarbahasajepang.ui.subbunpo.SubbunpoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.kosa.KosaActivity"
+            android:name="com.can.belajarbahasajepang.ui.kosa.KosaActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.penjelasan.PenjelasanActivity"
+            android:name="com.can.belajarbahasajepang.ui.penjelasan.PenjelasanActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.kanji.KanjiActivity"
+            android:name="com.can.belajarbahasajepang.ui.kanji.KanjiActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.bunpo.BunpoActivity"
+            android:name="com.can.belajarbahasajepang.ui.bunpo.BunpoActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.subkosa.SubkosaActivity"
+            android:name="com.can.belajarbahasajepang.ui.subkosa.SubkosaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home.HomeActivityN5"
+            android:name="com.can.belajarbahasajepang.ui.home.HomeActivityN5"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.home.HomeActivityN4"
+            android:name="com.can.belajarbahasajepang.ui.home.HomeActivityN4"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.can.belajarbahasajepang.ui.MainActivity"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
