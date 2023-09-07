@@ -22,7 +22,7 @@ class SubbunpoActivity : AppCompatActivity() {
     // dialog
     private lateinit var loadingDialog: LoadingDialog
     // banner ads
-    lateinit var mAdView : AdView
+    private lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +33,13 @@ class SubbunpoActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // Setting up the RecyclerView for displaying data
         val recyclerView = binding.subbunpoRv
@@ -56,11 +63,5 @@ class SubbunpoActivity : AppCompatActivity() {
             loadingDialog.dismiss()
             subbunpoAdapter.setData(ArrayList(subbunpoList))
         }
-
-        // google banner ads
-        MobileAds.initialize(this) {}
-        mAdView = binding.adView
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
     }
 }
