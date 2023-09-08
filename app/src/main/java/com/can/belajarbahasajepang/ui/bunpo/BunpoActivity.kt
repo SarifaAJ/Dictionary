@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.can.belajarbahasajepang.databinding.ActivityBunpoBinding
 import com.can.belajarbahasajepang.helper.LoadingDialog
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class BunpoActivity : AppCompatActivity() {
     // binding
@@ -16,6 +19,8 @@ class BunpoActivity : AppCompatActivity() {
     private lateinit var bunpoAdapter: com.can.belajarbahasajepang.adapter.BunpoAdapter
     // dialog
     private lateinit var loadingDialog: LoadingDialog
+    // banner ads
+    private lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +31,13 @@ class BunpoActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // Setting up the RecyclerView for displaying data
         val recyclerView = binding.bunpoRv

@@ -8,6 +8,9 @@ import com.can.belajarbahasajepang.databinding.ActivityPenjelasanBinding
 import com.can.belajarbahasajepang.adapter.PenjelasanAdapter
 import com.can.belajarbahasajepang.helper.LoadingDialog
 import com.can.belajarbahasajepang.model.LevelResponseItem
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class PenjelasanActivity : AppCompatActivity() {
     // binding
@@ -18,6 +21,8 @@ class PenjelasanActivity : AppCompatActivity() {
     private lateinit var penjelasanAdapter: PenjelasanAdapter
     // dialog
     private lateinit var loadingDialog: LoadingDialog
+    // banner ads
+    private lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +33,13 @@ class PenjelasanActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // Setting up the RecyclerView for displaying data
         val recyclerView = binding.penjelasanRv

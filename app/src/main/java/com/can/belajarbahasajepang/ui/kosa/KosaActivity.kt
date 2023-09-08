@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.can.belajarbahasajepang.databinding.ActivityKosaBinding
 import com.can.belajarbahasajepang.adapter.KosaAdapter
 import com.can.belajarbahasajepang.helper.LoadingDialog
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class KosaActivity : AppCompatActivity() {
     // binding
@@ -18,6 +21,8 @@ class KosaActivity : AppCompatActivity() {
     private lateinit var kosaAdapter: KosaAdapter
     // dialog
     private lateinit var loadingDialog: LoadingDialog
+    // banner ads
+    private lateinit var mAdView : AdView
 
     private fun clearSearchView() {
         binding.searchView.setQuery("", false)
@@ -33,6 +38,13 @@ class KosaActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // Setting up the RecyclerView for displaying data
         val recyclerView = binding.kosaRv

@@ -9,10 +9,15 @@ import com.can.belajarbahasajepang.ui.kanji.KanjiActivity
 import com.can.belajarbahasajepang.ui.penjelasan.PenjelasanActivity
 import com.can.belajarbahasajepang.ui.subbunpo.SubbunpoActivity
 import com.can.belajarbahasajepang.ui.subkosa.SubkosaActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class HomeActivityN4 : AppCompatActivity() {
     // binding
     private lateinit var binding: ActivityHomeN4Binding
+    // banner ads
+    private lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +28,13 @@ class HomeActivityN4 : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // btn to SubkosaActivity
         binding.kosaCv.setOnClickListener {

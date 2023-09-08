@@ -11,6 +11,9 @@ import com.can.belajarbahasajepang.databinding.ActivityKanjiBinding
 import com.can.belajarbahasajepang.adapter.KanjiAdapter
 import com.can.belajarbahasajepang.helper.LoadingDialog
 import com.can.belajarbahasajepang.model.LevelResponseItem
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import java.util.Locale
 
 class KanjiActivity : AppCompatActivity() {
@@ -25,6 +28,8 @@ class KanjiActivity : AppCompatActivity() {
     private lateinit var loadingDialog: LoadingDialog
     // text to speech
     private lateinit var textToSpeech: TextToSpeech
+    // banner ads
+    private lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +40,13 @@ class KanjiActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // Toggle view between list and grid when btn_list is clicked
         binding.btnList.setOnClickListener {

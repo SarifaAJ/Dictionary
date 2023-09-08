@@ -8,6 +8,9 @@ import com.can.belajarbahasajepang.databinding.ActivitySubkosaBinding
 import com.can.belajarbahasajepang.adapter.SubkosaAdapter
 import com.can.belajarbahasajepang.helper.LoadingDialog
 import com.can.belajarbahasajepang.model.LevelResponseItem
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class SubkosaActivity : AppCompatActivity() {
     // binding
@@ -18,6 +21,8 @@ class SubkosaActivity : AppCompatActivity() {
     private lateinit var subkosaAdapter: SubkosaAdapter
     // dialog
     private lateinit var loadingDialog: LoadingDialog
+    // banner ads
+    private lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +33,13 @@ class SubkosaActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
+
+        // google banner ads
+        MobileAds.initialize(this) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // Setting up the RecyclerView for displaying data
         val recyclerView = binding.subkosaRv
