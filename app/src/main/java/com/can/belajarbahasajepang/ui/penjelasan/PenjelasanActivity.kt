@@ -49,7 +49,7 @@ class PenjelasanActivity : AppCompatActivity() {
         recyclerView.adapter = penjelasanAdapter
 
         // loading dialog
-        loadingDialog = LoadingDialog(this) // Inisialisasi loading dialog
+        loadingDialog = LoadingDialog(this) // Initialize loading dialog
 
         // Setting up ViewModel
         penjelasanViewModel = ViewModelProvider(this)[PenjelasanViewModel::class.java]

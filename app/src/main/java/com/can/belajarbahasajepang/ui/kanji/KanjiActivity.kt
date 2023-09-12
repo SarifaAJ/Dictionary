@@ -57,22 +57,22 @@ class KanjiActivity : AppCompatActivity() {
         // Setting up the RecyclerView for displaying data
         val recyclerView = binding.kanjiRv
         recyclerView.layoutManager = LinearLayoutManager(this)
-        kanjiAdapter = KanjiAdapter(viewType = KanjiAdapter.VIEW_TYPE_LIST) // Atau viewType = KanjiAdapter.VIEW_TYPE_GRID sesuai kebutuhan
+        kanjiAdapter = KanjiAdapter(viewType = KanjiAdapter.VIEW_TYPE_LIST) // Or use viewType = KanjiAdapter.VIEW_TYPE_GRID
         recyclerView.adapter = kanjiAdapter
 
         // loading dialog
-        loadingDialog = LoadingDialog(this) // Inisialisasi loading dialog
+        loadingDialog = LoadingDialog(this) // Initialize loading dialog
 
         // Setting up ViewModel
         kanjiViewModel = ViewModelProvider(this)[KanjiViewModel::class.java]
         val levelResponseItem = intent.getParcelableExtra<LevelResponseItem>("levelResponseItem")
         levelResponseItem?.let {
-            loadingDialog.show() // Tampilkan loading dialog sebelum mengambil data
+            loadingDialog.show() // Show loading dialog
             kanjiViewModel.getKanji(it.id)
         }
 
         kanjiViewModel.response.observe(this) { kanjiList ->
-            loadingDialog.dismiss() // Sembunyikan dialog setelah mendapatkan respons
+            loadingDialog.dismiss() // Hide dialog
             kanjiAdapter.setData(ArrayList(kanjiList))
         }
 
@@ -96,16 +96,16 @@ class KanjiActivity : AppCompatActivity() {
 
         if (isListView) {
             recyclerView.layoutManager = LinearLayoutManager(this)
-            binding.btnList.setImageResource(R.drawable.round_view_list_24) // Ganti gambar menjadi ikon list
+            binding.btnList.setImageResource(R.drawable.round_view_list_24)
             kanjiAdapter = KanjiAdapter(initialData = ArrayList(), viewType = KanjiAdapter.VIEW_TYPE_LIST)
         } else {
-            recyclerView.layoutManager = GridLayoutManager(this, 2) // Atur numberOfColumns sesuai kebutuhan
-            binding.btnList.setImageResource(R.drawable.round_grid_view_24) // Ganti gambar menjadi ikon grid
+            recyclerView.layoutManager = GridLayoutManager(this, 2) // Set numberOfColumns as needed
+            binding.btnList.setImageResource(R.drawable.round_grid_view_24)
             kanjiAdapter = KanjiAdapter(initialData = ArrayList(), viewType = KanjiAdapter.VIEW_TYPE_GRID)
         }
 
         recyclerView.adapter = kanjiAdapter
-        kanjiAdapter.setData(ArrayList(kanjiViewModel.response.value!!)) // Set data ulang ke adapter
+        kanjiAdapter.setData(ArrayList(kanjiViewModel.response.value!!))
     }
 
     // Function to read a Kanji using Text-to-Speech

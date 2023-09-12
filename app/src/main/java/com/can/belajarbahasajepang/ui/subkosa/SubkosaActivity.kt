@@ -49,7 +49,7 @@ class SubkosaActivity : AppCompatActivity() {
         recyclerView.adapter = subkosaAdapter
 
         // loading dialog
-        loadingDialog = LoadingDialog(this) // Inisialisasi loading dialog
+        loadingDialog = LoadingDialog(this) // Initialize loading dialog
 
         // Setting up ViewModel
         subkosaViewModel = ViewModelProvider(this)[SubkosaViewModel::class.java]

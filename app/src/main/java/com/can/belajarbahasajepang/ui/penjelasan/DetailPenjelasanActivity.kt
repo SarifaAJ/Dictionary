@@ -34,6 +34,7 @@ class DetailPenjelasanActivity : AppCompatActivity() {
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
 
+        // get intent
         val judul = intent.getStringExtra("penjelasan_judul")
         val penjelasan = intent.getStringExtra("penjelasan_penjelasan")
 

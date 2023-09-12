@@ -49,7 +49,7 @@ class SubbunpoActivity : AppCompatActivity() {
         recyclerView.adapter = subbunpoAdapter
 
         // loading dialog
-        loadingDialog = LoadingDialog(this) // Inisialisasi loading dialog
+        loadingDialog = LoadingDialog(this) // Initialize loading dialog
 
         // Setting up ViewModel
         subbunpoViewModel = ViewModelProvider(this)[SubbunpoViewModel::class.java]

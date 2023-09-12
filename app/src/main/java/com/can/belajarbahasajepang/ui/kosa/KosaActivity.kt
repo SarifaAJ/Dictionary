@@ -53,7 +53,7 @@ class KosaActivity : AppCompatActivity() {
         recyclerView.adapter = kosaAdapter
 
         // loading dialog
-        loadingDialog = LoadingDialog(this) // Inisialisasi loading dialog
+        loadingDialog = LoadingDialog(this) // Initialize loading dialog
 
         // Setting up ViewModel
         kosaViewModel = ViewModelProvider(this)[KosaViewModel::class.java]

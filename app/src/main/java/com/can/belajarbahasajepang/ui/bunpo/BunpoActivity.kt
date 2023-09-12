@@ -47,7 +47,7 @@ class BunpoActivity : AppCompatActivity() {
         recyclerView.adapter = bunpoAdapter
 
         // loading dialog
-        loadingDialog = LoadingDialog(this) // Inisialisasi loading dialog
+        loadingDialog = LoadingDialog(this) // Initialize loading dialog
 
         // Setting up ViewModel
         bunpoViewModel = ViewModelProvider(this)[BunpoViewModel::class.java]
